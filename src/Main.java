@@ -22,7 +22,7 @@ public class Main {
 
         double[] productList = {product1.calculateDemand(), product2.calculateDemand(), product3.calculateDemand()};
         Arrays.sort(productList);
-        System.out.println("\nThe sorted array is: ");
+        System.out.println("\nThe sorted array of products by demand is: ");
         for (double productDemand : productList) {
             System.out.print(productDemand + " ");
         }

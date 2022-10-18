@@ -73,7 +73,7 @@ public class Product {
      * calculates the demand
      */
     public double calculateDemand() {
-        return this.demandInFirstYear() / this.demandInSecondYear();
+        return abs(this.demandInFirstYear() - this.demandInSecondYear());
     }
 
     /**

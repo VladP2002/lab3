@@ -85,9 +85,9 @@ public class Product {
      */
     public char compareDemand() {
         double comparison = this.calculateDemand();
-        if (comparison < 1) {
+        if (comparison < 0) {
             return 'a';
-        } else if (1 < comparison || comparison < 1.10) {
+        } else if (0 < comparison || comparison < 0.10) {
             return 'b';
         } else {
             return 'c';

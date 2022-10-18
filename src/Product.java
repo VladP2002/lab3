@@ -73,13 +73,13 @@ public class Product {
      * calculates the demand
      */
     public double calculateDemand() {
-        return abs(this.demandInFirstYear() - this.demandInSecondYear());
+        return this.demandInSecondYear() - this.demandInFirstYear();
     }
 
     /**
      * compares the demands from both years
      *
-     * @return a, if the demand is incresing
+     * @return a, if the demand is increasing
      * b, if the demand is stagnating
      * c, if the demand is decreasing
      */
@@ -87,7 +87,7 @@ public class Product {
         double comparison = this.calculateDemand();
         if (comparison < 0) {
             return 'a';
-        } else if (0 < comparison || comparison < 0.10) {
+        } else if (0.00 == comparison || comparison < 0.10) {
             return 'b';
         } else {
             return 'c';
